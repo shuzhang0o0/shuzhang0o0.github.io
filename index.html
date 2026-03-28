@@ -9,49 +9,34 @@
       font-family: Arial, sans-serif;
       line-height: 1.6;
       margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #222;
+      background: #ffffff;
+      color: #111111;
     }
 
     .page {
-      max-width: 800px;
+      max-width: 850px;
       margin: 0 auto;
-      padding: 30px 20px;
+      padding: 24px;
     }
 
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 40px;
-      margin-bottom: 20px;
-    }
-
-    .info {
-      flex: 1;
-    }
-
-    .photo img {
-      width: 200px;
-      height: auto;
-      object-fit: cover;
-    }
-
-    h1 {
-      margin-bottom: 10px;
+    h1, h2 {
+      margin-bottom: 12px;
     }
 
     h2 {
-      margin-top: 30px;
-      margin-bottom: 10px;
-      font-size: 1.3em;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 5px;
+      text-align: center;
+      margin-top: 32px;
+      font-size: 1.5em;
+    }
+
+    hr {
+      margin: 28px 0;
+      border: none;
+      border-top: 1px solid #cccccc;
     }
 
     a {
-      color: #b030b0;
+      color: #7a2ea8;
       text-decoration: none;
     }
 
@@ -59,20 +44,77 @@
       text-decoration: underline;
     }
 
+    .intro {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .intro-text {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .photo img {
+      width: 220px;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
     .entry {
-      margin-bottom: 15px;
+      display: grid;
+      grid-template-columns: 220px 120px 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .date {
+      font-weight: bold;
+    }
+
+    .location {
+      font-style: italic;
+      color: #555555;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 700px) {
+      .entry {
+        grid-template-columns: 1fr;
+      }
+
+      .photo img {
+        width: 180px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="page">
-    <div class="header">
-      <div class="info">
-        <h1>Shu Zhang</h1>
+    <h1>Shu Zhang</h1>
+
+    <div class="intro">
+      <div class="intro-text">
         <p>
+          Shu Zhang<br>
           School of Mathematics and Statistics<br>
           Xi'an Jiaotong University<br>
-          Xi'an, Shaanxi, China
+          Shaanxi, China
         </p>
         <p>
           Email: <a href="mailto:your_email@example.com">your_email@example.com</a>
@@ -83,37 +125,82 @@
       </div>
     </div>
 
+    <hr>
+
     <h2>About</h2>
     <p>
-      I am an undergraduate student in mathematics at Xi'an Jiaotong University.
-      My interests include combinatorics, graph theory, and related areas of mathematics.
+      Hi! I am an undergraduate student majoring in mathematics at
+      <a href="https://en.xjtu.edu.cn/">Xi'an Jiaotong University</a>.
+      My interests are mainly in combinatorics and graph theory. I enjoy learning new mathematics
+      and exploring research opportunities.
     </p>
+
+    <hr>
 
     <h2>Education</h2>
-    <div class="entry">
-      <strong>Xi'an Jiaotong University</strong>, B.Sc. in Mathematics<br>
-      Sep. 2022 – Jul. 2026 (expected)
+    <div class="timeline">
+      <div class="entry">
+        <div class="date">Sep. 2022 – Jul. 2026 (expected)</div>
+        <div class="location">Xi'an, China</div>
+        <div>
+          Undergraduate study in mathematics at Xi'an Jiaotong University.
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="date">Jan. 2025 – Jun. 2025</div>
+        <div class="location">Berkeley, CA</div>
+        <div>
+          Visiting study at UC Berkeley in Spring 2025.
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="date">Sep. 2020 – Jul. 2022</div>
+        <div class="location">Xi'an, China</div>
+        <div>
+          Honors Youth Program at Xi'an Jiaotong University.
+        </div>
+      </div>
     </div>
-    <div class="entry">
-      <strong>UC Berkeley</strong>, Visiting Student Program<br>
-      Jan. 2025 – Jun. 2025
-    </div>
+
+    <hr>
 
     <h2>Research Interests</h2>
-    <p>
-      Combinatorics, graph theory, Ramsey theory, graph coloring, and algebraic combinatorics.
-    </p>
+    <ul>
+      <li>Combinatorics</li>
+      <li>Graph theory</li>
+      <li>Ramsey theory</li>
+      <li>Graph coloring problems</li>
+      <li>Algebraic combinatorics</li>
+    </ul>
 
-    <h2>Research</h2>
-    <div class="entry">
-      <strong>Clocks are e-positive</strong>, Discrete Mathematics (2026).<br>
-      <a href="https://doi.org/10.1016/j.disc.2025.114723">DOI link</a>
-    </div>
+    <hr>
 
-    <div class="entry">
-      <strong>Model-Driven Subspaces for Large-Scale Optimization with Local Approximation Strategy</strong>.<br>
-      <a href="https://arxiv.org/abs/2509.08256">arXiv link</a>
-    </div>
+    <h2>Research Experience</h2>
+    <ul>
+      <li>
+        <i>Clocks are e-positive</i>, Discrete Mathematics, 2026.
+        <a href="https://doi.org/10.1016/j.disc.2025.114723">DOI</a>
+      </li>
+
+      <li>
+        <i>Model-Driven Subspaces for Large-Scale Optimization with Local Approximation Strategy</i>,
+        <a href="https://arxiv.org/abs/2509.08256">arXiv</a>
+      </li>
+
+      <li>
+        I am currently collaborating with
+        <a href="https://pxie98.github.io/">Dr. Pengcheng Xie</a> on a project titled
+        <i>Zeroth-Order and Scalable Trust-Region Optimization on Lie Groups and Extension on Riemannian Manifolds</i>.
+        This work focuses on developing scalable derivative-free trust-region methods in non-Euclidean settings,
+        with particular emphasis on Lie groups and their extension to general Riemannian manifolds.
+      </li>
+
+      <li>
+        Current interest: anti-Ramsey problems in complete 3-graphs.
+      </li>
+    </ul>
   </div>
 </body>
 </html>
